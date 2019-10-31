@@ -1,4 +1,4 @@
-require_relative "lib/song.rb"
+require_relative "lib/author"
 
 class Post
   attr_accessor :author, :name
