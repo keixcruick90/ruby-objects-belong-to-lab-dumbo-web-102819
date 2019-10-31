@@ -1,9 +1,23 @@
-class Song
-  attr_accessor :name, :artist :genre
+require "spec_helper"
 
-  def initialize(name, genre)
+class Song
+  attr_accessor :name
+
+  def initialize(name)
     @name = name
-    @genre = genre
+  end
+
+  it "belongs to an artist" do
+    artist = Artist.new
+    song.artist = artist
+    expect(song.artist).to eq(artist)
+  end
+
+  it "knows the name of the artist it belongs to" do
+    artist = Artist.new
+    artist.name = "Beyonce"
+    song.artist = artist
+    expect(song.artist.name).to eq("Beyonce")
   end
 
 end
