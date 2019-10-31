@@ -1,7 +1,5 @@
-require_relative "author"
-
 class Post
-  attr_accessor :author, :name
+  attr_accessor :name, :author
 
   def initialize(name)
     @name = name
